@@ -1,0 +1,83 @@
+﻿<Window x:Class="Userssssssss.Windows.Admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Userssssssss.Windows"
+        mc:Ignorable="d"
+        Title="Admin" Height="450" Width="800">
+    <Grid Background="Aqua">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <DataGrid Grid.Row="1" 
+                  x:Name="dtg"
+                  AutoGenerateColumns="True" 
+                  Grid.ColumnSpan="3" 
+                  Grid.RowSpan="4" >
+            <!-- <DataGrid.Columns >
+                <DataGridTextColumn Header="LName" Width="*" Binding="{ Binding Path=LName }"/>
+                <DataGridTextColumn Header="FName" Width="*" Binding="{ Binding Path=FName }"/>
+                <DataGridTextColumn Header="Login" Width="*" Binding="{ Binding Path=login }"/>
+                <DataGridTextColumn Header="Password" Width="*" Binding="{ Binding Path=password }"/>
+                <DataGridTextColumn Header="Gender" Width="*" Binding="{ Binding Path=idGender }"/>
+                <DataGridTextColumn Header="idRole" Width="*" Binding="{ Binding Path=idRole }"/>
+            </DataGrid.Columns>-->
+        </DataGrid>
+
+        <ComboBox Grid.Column="1" 
+                  x:Name="cmb" 
+                  Margin="20" 
+                  SelectionChanged="cmb_SelectionChanged">
+            <!--<TextBlock Text="Администратор"/>
+            <TextBlock Text="Менеджер"/>
+                <TextBlock Text="Пользователи"/>-->
+        </ComboBox>
+        
+        <TextBox Margin="20" 
+                 x:Name="txbSearch" 
+                 TextChanged="txbSearch_TextChanged"/>
+
+        <Button Grid.Column="0" 
+                Content="добавить" 
+                x:Name="btnAdd" 
+                Margin="20" 
+                Click="btnAdd_Click" 
+                Grid.Row="5" 
+                FontSize="25" 
+                FontFamily="century gothic"/>
+
+        <Button Grid.Column="2" 
+                Content="изменить" 
+                x:Name="btnEdit" 
+                Margin="20" 
+                Click="btnEdit_Click" 
+                Grid.Row="5" 
+                FontSize="25" 
+                FontFamily="century gothic"/>
+        
+                <Button Grid.Column="1" 
+                Content="удалить" 
+                x:Name="btnDelete" 
+                Click="btnDelete_Click"
+                Margin="20" 
+                Grid.Row="5" 
+                FontSize="25" 
+                FontFamily="century gothic"/>
+        
+
+
+    </Grid>
+</Window>
