@@ -25,6 +25,7 @@ namespace Userssssssss.Windows
             Userss users = new Userss();
             var auth = Enitition.context.Userss.ToList();
             dtg.ItemsSource = auth;
+            
         }
     }
 }
